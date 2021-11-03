@@ -292,11 +292,14 @@ df_Melissa <- classes %>%
   left_join(month_precipitation) %>%
   left_join(month_temp) %>%
   left_join(month_zodiac) %>%
-  left_join(month_days) %>%
-  filter(month_name == "January" | month_name == "February" | month_name == "March" | month_name == "April" | month_name == "May")
- 
+  left_join(month_days)
+```
+
+```{r random-filter-2}
+df_Melissa %>%
+  filter(month_name == c("January", "February", "March", "April", "May"))
+
 month_percip <- pull(df_Melissa)
-  
 ```
 
 #### Member 3
